@@ -222,10 +222,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-purple-500/25">
-                <Mic className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-white font-bold text-3xl bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">Finehost</span>
+              <img src="/finehost_wh.png" alt="Finehost" className="h-16 w-auto" />
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <button onClick={scrollToHero} className="text-white/80 hover:text-white transition-colors font-medium">Demo</button>
@@ -1675,19 +1672,11 @@ export default function Home() {
       {/* Footer */}
       <footer className="relative z-10 py-20 px-4 sm:px-6 lg:px-8 border-t border-white/20 bg-black/40 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto relative">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-4 mb-8 md:mb-0">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-purple-500/25">
-                <Mic className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-white font-bold text-3xl bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">Finehost</span>
+          <div className="flex flex-col items-center">
+            <div className="flex items-center justify-center mb-8">
+              <img src="/finehost_wh.png" alt="Finehost" className="h-20 w-auto" />
             </div>
-            <div className="flex space-x-12 text-white/60">
-              <a href="#" className="hover:text-white transition-colors font-medium">Careers</a>
-              <a href="#" className="hover:text-white transition-colors font-medium">Blog</a>
-              <a href="#" className="hover:text-white transition-colors font-medium">Newsletter</a>
-              <a href="#" className="hover:text-white transition-colors font-medium">Support</a>
-            </div>
+
           </div>
           <div className="mt-12 pt-8 border-t border-white/10 text-center">
             <p className="text-white/40 text-lg">
