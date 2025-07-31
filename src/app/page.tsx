@@ -916,8 +916,30 @@ export default function Home() {
                   <video 
                     className="w-full h-auto max-h-[500px] object-cover"
                     controls
-                    poster=""
                     preload="metadata"
+                    playsInline
+                    muted
+                    onError={(e) => {
+                      console.error('Video loading error:', e);
+                      const videoElement = e.target as HTMLVideoElement;
+                      videoElement.style.display = 'none';
+                      const container = videoElement.parentElement;
+                      if (container) {
+                        container.innerHTML = `
+                          <div class="flex items-center justify-center h-64 bg-slate-800/50 rounded-2xl">
+                            <div class="text-center">
+                              <div class="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                                </svg>
+                              </div>
+                              <p class="text-white/70 text-sm">Video temporarily unavailable</p>
+                              <p class="text-white/50 text-xs mt-2">Please try again later</p>
+                            </div>
+                          </div>
+                        `;
+                      }
+                    }}
                   >
                     <source src="/interview-full.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
