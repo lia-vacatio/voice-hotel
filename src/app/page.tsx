@@ -225,7 +225,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-purple-500/25">
                 <Mic className="w-6 h-6 text-white" />
               </div>
-              <span className="text-white font-bold text-3xl bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">VoiceHotel</span>
+              <span className="text-white font-bold text-3xl bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">Finehost</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <button onClick={scrollToHero} className="text-white/80 hover:text-white transition-colors font-medium">Demo</button>
@@ -414,7 +414,7 @@ export default function Home() {
                             <div className="w-8 h-8 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center shadow-md">
                               <Sparkles className="w-4 h-4 text-white" />
                             </div>
-                            <span className="text-emerald-300 text-sm font-medium">VoiceHotel AI</span>
+                            <span className="text-emerald-300 text-sm font-medium">Finehost AI</span>
                           </div>
                           <p className="text-white/90 text-left">{currentDemo.response}</p>
                         </div>
@@ -818,7 +818,129 @@ export default function Home() {
         </div>
       </section>
 
-
+      {/* VUI Solution Section */}
+      <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        {/* Deep Space Background - matching hero section */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-slate-900/30 to-black" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 via-slate-800/10 to-black" />
+        
+        {/* Aurora Accent Points */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_30%,rgba(34,197,94,0.15),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_70%,rgba(59,130,246,0.12),transparent_65%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_20%,rgba(168,85,247,0.1),transparent_60%)]" />
+        
+        {/* Aurora Shimmer */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-emerald-400/5 to-transparent animate-pulse" style={{animationDelay: '0s', animationDuration: '8s'}} />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-transparent via-blue-400/4 to-transparent animate-pulse" style={{animationDelay: '4s', animationDuration: '10s'}} />
+        </div>
+        
+        {/* Space Stars */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white rounded-full animate-pulse" style={{animationDelay: '0s'}} />
+          <div className="absolute top-1/3 right-1/4 w-0.5 h-0.5 bg-blue-200 rounded-full animate-pulse" style={{animationDelay: '2s'}} />
+          <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-purple-200 rounded-full animate-pulse" style={{animationDelay: '4s'}} />
+          <div className="absolute top-1/5 right-1/3 w-0.5 h-0.5 bg-indigo-200 rounded-full animate-pulse" style={{animationDelay: '6s'}} />
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          {/* Text Content Area - Center Aligned */}
+          <div className="text-center mb-24">
+            {/* Section Title */}
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-4xl md:text-5xl font-bold mb-8 leading-tight tracking-wide"
+            >
+              <span className="bg-gradient-to-r from-white via-purple-100 to-emerald-100 bg-clip-text text-transparent">
+                Everyone's answer was VUI
+              </span>
+            </motion.h2>
+            
+            {/* Description Content */}
+            <div className="max-w-4xl mx-auto space-y-12">
+              <div className="static transform-none">
+                <p className="text-xl md:text-2xl text-white/90 leading-relaxed font-medium static transform-none">
+                  Development teams overwhelmed by CS, operators exhausted by PMS...<br />
+                  Tired of recurring problems?
+                </p>
+              </div>
+              
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="space-y-8 text-lg md:text-xl text-white/80 leading-loose"
+              >
+                <p className="max-w-3xl mx-auto">
+                  <span className="relative inline-block">
+                    <span className="relative z-10 px-1">VUI (Voice User Interface) is a GUI alternative system</span>
+                    <span className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-6 bg-gradient-to-r from-yellow-300/20 via-green-300/25 to-yellow-300/20 rounded-sm blur-sm opacity-60"></span>
+                    <span className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-5 bg-gradient-to-r from-yellow-400/15 via-green-400/20 to-yellow-400/15 rounded-sm"></span>
+                  </span>
+                  <br />
+                  <span className="relative inline-block">
+                    <span className="relative z-10 px-1">that operates with voice alone, without screens.</span>
+                    <span className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-6 bg-gradient-to-r from-yellow-300/20 via-green-300/25 to-yellow-300/20 rounded-sm blur-sm opacity-60"></span>
+                    <span className="absolute left-0 right-0 top-1/2 -translate-y-1/2 h-5 bg-gradient-to-r from-yellow-400/15 via-green-400/20 to-yellow-400/15 rounded-sm"></span>
+                  </span>
+                </p>
+                <p className="max-w-3xl mx-auto">
+                  It automates repetitive tasks needed for hospitality operations<br />
+                  and can be used intuitively by anyone,<br />
+                  reducing development resources while increasing operational efficiency.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+          
+          {/* Interview Video Card - Clean Separation */}
+          <motion.div 
+            initial={{ opacity: 0, y: 40, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="relative bg-slate-900/60 backdrop-blur-2xl rounded-3xl p-8 md:p-12 border border-white/10 shadow-2xl shadow-black/40 hover:shadow-purple-500/20 transition-all duration-500 hover:scale-[1.02]">
+              {/* Enhanced Glassmorphism overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-purple-500/5 to-blue-500/5 rounded-3xl opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent rounded-3xl" />
+              
+              <div className="relative z-10">
+                {/* Video Title */}
+                <h3 className="text-2xl font-bold text-white mb-6 text-center">Interview Video</h3>
+                
+                {/* Interview Video */}
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 bg-black/20 backdrop-blur-sm border border-white/10">
+                  <video 
+                    className="w-full h-auto max-h-[500px] object-cover"
+                    controls
+                    poster=""
+                    preload="metadata"
+                  >
+                    <source src="/interview-full.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  
+                  {/* Video overlay gradient for better integration */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10 pointer-events-none rounded-2xl" />
+                </div>
+                
+                {/* Description below video */}
+                <p className="text-white/70 text-center max-w-2xl mx-auto leading-relaxed mt-6 text-lg">
+                  Discover how hotel operators and PMS developers found real value in VUI —<br />
+                  through their own stories and experiences.
+                </p>
+              </div>
+              
+              {/* Subtle Corner Accents */}
+              <div className="absolute top-4 right-4 w-2 h-2 bg-purple-400/30 rounded-full animate-pulse" />
+              <div className="absolute bottom-4 left-4 w-1 h-1 bg-blue-400/40 rounded-full animate-pulse delay-1000" />
+            </div>
+          </motion.div>
+        </div>
+      </section>
 
       {/* GUI vs VUI Comparison */}
       <section id="comparison" className="py-32 px-4 sm:px-6 lg:px-8 relative">
@@ -914,7 +1036,7 @@ export default function Home() {
 
               </motion.div>
 
-              {/* VoiceHotel VUI - Right Side */}
+              {/* Finehost VUI - Right Side */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -930,7 +1052,7 @@ export default function Home() {
                       <div className="w-12 h-12 bg-gradient-to-br from-purple-500 via-blue-500 to-green-500 rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/25">
                         <Sparkle className="w-6 h-6 text-white" />
                       </div>
-                      <h3 className="text-2xl font-bold text-white">VoiceHotel VUI</h3>
+                      <h3 className="text-2xl font-bold text-white">Finehost VUI</h3>
                       <div className="px-3 py-1 bg-green-500/20 rounded-full text-xs text-green-300 font-medium">FUTURE</div>
                     </div>
                     
@@ -1366,7 +1488,7 @@ export default function Home() {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 tracking-wide">
               It&apos;s time to join<br />
-              the thousands of hoteliers using VoiceHotel
+              the thousands of hoteliers using Finehost
             </h2>
             <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               From boutique hotels to large management companies,<br />
@@ -1536,7 +1658,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-purple-500/25">
                 <Mic className="w-6 h-6 text-white" />
               </div>
-              <span className="text-white font-bold text-3xl bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">VoiceHotel</span>
+              <span className="text-white font-bold text-3xl bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">Finehost</span>
             </div>
             <div className="flex space-x-12 text-white/60">
               <a href="#" className="hover:text-white transition-colors font-medium">Careers</a>

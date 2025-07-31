@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  title: "VoiceHotel - Voice-Powered Hotel Management",
+  title: "Finehost - Voice-Powered Hotel Management",
   description: "The future of hospitality operations. Manage your hotel with just your voice - no screens, no clicks, just natural conversation.",
 };
 
