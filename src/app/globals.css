@@ -32,3 +32,124 @@ h1, h2, h3, h4, h5, h6,
 [class*="heading"] {
   font-family: "Satoshi", Arial, Helvetica, sans-serif;
 }
+
+/* 모바일 반응형 스타일 */
+@media (max-width: 768px) {
+  /* 전체 레이아웃 */
+  .min-h-screen {
+    overflow-x: hidden;
+  }
+  
+  /* Hero 섹션 */
+  .hero-title {
+    font-size: 2.5rem !important; /* 40px */
+    line-height: 1.1 !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem !important; /* 16px */
+    margin-bottom: 2rem !important;
+    padding: 0 1rem;
+  }
+  
+  /* 네비게이션 */
+  .nav-container {
+    padding: 1rem !important;
+  }
+  
+  /* 섹션 패딩 */
+  .section-padding {
+    padding: 4rem 1rem !important;
+  }
+  
+  /* 버튼 크기 개선 */
+  .mobile-button {
+    min-height: 48px;
+    padding: 12px 24px !important;
+    font-size: 1rem !important;
+  }
+  
+  .voice-button {
+    width: 64px !important;
+    height: 64px !important;
+  }
+  
+  /* 카드 레이아웃 */
+  .mobile-card {
+    padding: 1.5rem !important;
+    margin-bottom: 1rem;
+  }
+  
+  /* 그리드 레이아웃 강제 단일 컬럼 */
+  .mobile-single-column {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  /* 텍스트 크기 조정 */
+  .mobile-text-lg {
+    font-size: 1.125rem !important;
+  }
+  
+  .mobile-text-base {
+    font-size: 1rem !important;
+  }
+  
+  .mobile-text-sm {
+    font-size: 0.875rem !important;
+  }
+  
+  /* 모바일에서 데모 인터페이스 */
+  .demo-interface {
+    padding: 1rem !important;
+  }
+  
+  /* 비교 섹션 */
+  .comparison-card {
+    margin-bottom: 2rem;
+  }
+  
+  /* VS 배지 위치 조정 */
+  .vs-badge-mobile {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 1rem auto;
+    display: flex !important;
+  }
+  
+  /* Contact form */
+  .contact-form {
+    padding: 1.5rem !important;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px !important; /* iOS zoom 방지 */
+  }
+}
+
+@media (max-width: 480px) {
+  /* 매우 작은 화면용 추가 조정 */
+  .hero-title {
+    font-size: 2rem !important; /* 32px */
+  }
+  
+  .section-padding {
+    padding: 3rem 0.75rem !important;
+  }
+  
+  .mobile-card {
+    padding: 1rem !important;
+  }
+}
+
+/* 터치 최적화 */
+@media (hover: none) and (pointer: coarse) {
+  .touch-friendly {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

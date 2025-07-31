@@ -228,9 +228,9 @@ export default function Home() {
               <span className="text-white font-bold text-3xl bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">VoiceHotel</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
+              <button onClick={scrollToHero} className="text-white/80 hover:text-white transition-colors font-medium">Demo</button>
               <a href="#features" className="text-white/80 hover:text-white transition-colors font-medium">Features</a>
               <a href="#comparison" className="text-white/80 hover:text-white transition-colors font-medium">Comparison</a>
-              <button onClick={scrollToHero} className="text-white/80 hover:text-white transition-colors font-medium">Demo</button>
               <button onClick={scrollToContact} className="text-white/80 hover:text-white transition-colors font-medium">Contact</button>
             </div>
           </div>
@@ -486,7 +486,7 @@ export default function Home() {
                 </div>
 
                 {/* Visual Result Panel */}
-                <div className="bg-white/5 backdrop-blur-2xl rounded-2xl p-8 border border-white/10 shadow-2xl shadow-emerald-500/10">
+                <div className="mobile-card demo-interface bg-white/5 backdrop-blur-2xl rounded-2xl p-8 border border-white/10 shadow-2xl shadow-emerald-500/10">
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center space-x-3">
                       <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-500 rounded-xl flex items-center justify-center">
@@ -973,18 +973,7 @@ export default function Home() {
                       </motion.div>
                     </div>
 
-                    {/* CTA at bottom */}
-                    <motion.div 
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.6 }}
-                      className="mt-8 pt-6 border-t border-white/10"
-                    >
-                      <button className="w-full bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 flex items-center justify-center space-x-2">
-                        <span>Try VoiceHotel</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
-                    </motion.div>
+
                   </div>
                 </div>
               </motion.div>
@@ -1118,7 +1107,7 @@ export default function Home() {
               </span>
               <br />
               <span className="bg-gradient-to-r from-orange-200 via-white to-purple-100 bg-clip-text text-transparent">
-                Now, they just speak.
+                Now, they just speak
               </span>
             </h2>
           </motion.div>
@@ -1377,7 +1366,7 @@ export default function Home() {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 tracking-wide">
               It&apos;s time to join<br />
-              the thousands of hoteliers using VoiceHotel.
+              the thousands of hoteliers using VoiceHotel
             </h2>
             <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               From boutique hotels to large management companies,<br />
