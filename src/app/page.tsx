@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mic, MicOff, Play, Pause, Volume2, Zap, Shield, Clock, Users, TrendingUp, Smartphone, Monitor, CheckCircle, XCircle, ArrowRight, Star, Globe, Sparkles, MousePointer2, Timer, AlertTriangle, GraduationCap, Layers3, Sparkle, User, MessageSquare, Mail, Building, Send } from 'lucide-react';
+import { Mic, MicOff, Play, Volume2, Zap, Shield, Users, Monitor, CheckCircle, ArrowRight, Star, Sparkles, MousePointer2, Timer, AlertTriangle, GraduationCap, Layers3, Sparkle, User, MessageSquare, Mail, Building, Send } from 'lucide-react';
 
 interface DemoCommand {
   command: string;
@@ -13,7 +13,6 @@ interface DemoCommand {
 
 export default function Home() {
   const [isListening, setIsListening] = useState(false);
-  const [currentCommand, setCurrentCommand] = useState('');
   const [demoStep, setDemoStep] = useState(0); // 0: idle, 1: command, 2: processing, 3: response, 4: visual
   const [currentDemo, setCurrentDemo] = useState<DemoCommand | null>(null);
   const [demoCommands] = useState<DemoCommand[]>([
@@ -304,7 +303,7 @@ export default function Home() {
                       >
                         <p className="text-white/60 text-base mb-4">Click to experience interactive demo</p>
                         <div className="text-xs text-white/40 mb-4">
-                          Current demo: "{demoCommands[currentDemoIndex].command.substring(0, 30)}..."
+                          Current demo: &ldquo;{demoCommands[currentDemoIndex].command.substring(0, 30)}...&rdquo;
                         </div>
                         
                         {/* Demo Indicators - Clickable */}
@@ -353,7 +352,7 @@ export default function Home() {
                             </div>
                             <span className="text-blue-300 text-sm font-medium">Hotel Manager</span>
                           </div>
-                          <p className="text-white/90 text-left italic">"{currentDemo.command}"</p>
+                          <p className="text-white/90 text-left italic">&ldquo;{currentDemo.command}&rdquo;</p>
                         </div>
                         
                         {/* Step indicator during demo */}
@@ -943,7 +942,7 @@ export default function Home() {
                         className="flex items-center space-x-4 p-4 bg-green-500/10 rounded-xl hover:bg-green-500/20 transition-colors"
                       >
                         <Mic className="w-6 h-6 text-green-400" />
-                        <span className="text-green-100 text-sm font-medium">"Block room for July 16th" - Done!</span>
+                        <span className="text-green-100 text-sm font-medium">&ldquo;Block room for July 16th&rdquo; - Done!</span>
                       </motion.div>
                       <motion.div 
                         initial={{ opacity: 0, x: 10 }}
@@ -1160,10 +1159,10 @@ export default function Home() {
                   
                   {/* Quote with voice wave icon */}
                   <div className="relative">
-                    <div className="absolute -left-2 -top-2 text-purple-400/30 text-4xl font-serif">"</div>
+                    <div className="absolute -left-2 -top-2 text-purple-400/30 text-4xl font-serif">&ldquo;</div>
                     <p className="text-white/90 text-base italic leading-relaxed pl-6 group-hover:text-white transition-colors duration-300">
                       I used to worry about making mistakes every time I touched the system.<br />
-                      Now I just speak — it's faster, and I feel way more confident.
+                      Now I just speak — it&apos;s faster, and I feel way more confident.
                     </p>
                     {/* Voice wave decoration */}
                     <div className="flex items-center mt-4 space-x-1 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
@@ -1213,10 +1212,10 @@ export default function Home() {
                   
                   {/* Quote with voice wave icon */}
                   <div className="relative">
-                    <div className="absolute -left-2 -top-2 text-blue-400/30 text-4xl font-serif">"</div>
+                    <div className="absolute -left-2 -top-2 text-blue-400/30 text-4xl font-serif">&ldquo;</div>
                     <p className="text-white/90 text-base italic leading-relaxed pl-6 group-hover:text-white transition-colors duration-300">
-                      This isn't just a new tool.<br />
-                      It's a completely new way to think about hotel operations.
+                      This isn&apos;t just a new tool.<br />
+                      It&apos;s a completely new way to think about hotel operations.
                     </p>
                     {/* Voice wave decoration */}
                     <div className="flex items-center mt-4 space-x-1 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
@@ -1266,7 +1265,7 @@ export default function Home() {
                   
                   {/* Quote with voice wave icon */}
                   <div className="relative">
-                    <div className="absolute -left-2 -top-2 text-emerald-400/30 text-4xl font-serif">"</div>
+                    <div className="absolute -left-2 -top-2 text-emerald-400/30 text-4xl font-serif">&ldquo;</div>
                     <p className="text-white/90 text-base italic leading-relaxed pl-6 group-hover:text-white transition-colors duration-300">
                       Technology used to overwhelm me.<br />
                       But with this, I just say what I need and it happens.<br />
@@ -1320,10 +1319,10 @@ export default function Home() {
                   
                   {/* Quote with voice wave icon */}
                   <div className="relative">
-                    <div className="absolute -left-2 -top-2 text-orange-400/30 text-4xl font-serif">"</div>
+                    <div className="absolute -left-2 -top-2 text-orange-400/30 text-4xl font-serif">&ldquo;</div>
                     <p className="text-white/90 text-base italic leading-relaxed pl-6 group-hover:text-white transition-colors duration-300">
                       I never imagined I could run a guesthouse without using a screen.<br />
-                      But this makes it possible. It's like giving a voice to my operations.
+                      But this makes it possible. It&apos;s like giving a voice to my operations.
                     </p>
                     {/* Voice wave decoration */}
                     <div className="flex items-center mt-4 space-x-1 opacity-60 group-hover:opacity-100 transition-opacity duration-300">
@@ -1377,12 +1376,12 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 tracking-wide">
-              It's time to join<br />
+              It&apos;s time to join<br />
               the thousands of hoteliers using VoiceHotel.
             </h2>
             <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               From boutique hotels to large management companies,<br />
-              we'd love to discuss your operational challenges together.
+              we&apos;d love to discuss your operational challenges together.
             </p>
           </motion.div>
 
@@ -1460,7 +1459,7 @@ export default function Home() {
                       <textarea
                         value={contactForm.message}
                         onChange={(e) => handleContactChange('message', e.target.value)}
-                        placeholder="Tell us about your current operation and what features you're considering. Include details like number of rooms, key workflows, current systems, etc."
+                        placeholder="Tell us about your current operation and what features you&apos;re considering. Include details like number of rooms, key workflows, current systems, etc."
                         required
                         rows={5}
                         className="w-full bg-white/10 backdrop-blur-xl rounded-xl p-4 text-white placeholder-white/50 border border-white/20 focus:border-purple-400/50 focus:ring-2 focus:ring-purple-500/20 transition-all duration-300 hover:bg-white/15 focus:bg-white/15 resize-none"
@@ -1504,7 +1503,7 @@ export default function Home() {
                       <CheckCircle className="w-10 h-10 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">
-                      Thanks! We'll get back to you soon.
+                      Thanks! We&apos;ll get back to you soon.
                     </h3>
                     <p className="text-white/70 text-lg">
                       Until then, keep speaking easy.
@@ -1533,7 +1532,7 @@ export default function Home() {
               </div>
               
               <p className="text-white/50 text-sm mt-6 max-w-2xl mx-auto leading-relaxed">
-                Have questions? Feel free to reach out anytime. We'll personally respond to every inquiry.
+                Have questions? Feel free to reach out anytime. We&apos;ll personally respond to every inquiry.
               </p>
             </motion.div>
           </motion.div>
