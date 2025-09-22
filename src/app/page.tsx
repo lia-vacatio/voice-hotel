@@ -1053,6 +1053,7 @@ export default function Home() {
                 {/* Interview Video */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 bg-black/20 backdrop-blur-sm border border-white/10">
                   <video 
+                    key={lang} // Force re-render when language changes
                     className="w-full h-auto max-h-[500px] object-cover"
                     controls
                     preload="metadata"
