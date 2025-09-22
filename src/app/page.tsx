@@ -1080,7 +1080,7 @@ export default function Home() {
                       }
                     }}
                   >
-                    <source src="/interview-full.mp4" type="video/mp4" />
+                    <source src={lang === 'ko' ? "/interview-korean.mp4" : "/interview-full.mp4"} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                   
