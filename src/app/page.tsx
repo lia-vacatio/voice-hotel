@@ -1052,39 +1052,60 @@ export default function Home() {
                 
                 {/* Interview Video */}
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50 bg-black/20 backdrop-blur-sm border border-white/10">
-                  <video 
-                    key={lang} // Force re-render when language changes
-                    className="w-full h-auto max-h-[500px] object-cover"
-                    controls
-                    preload="metadata"
-                    playsInline
-                    muted
-                    onError={(e) => {
-                      console.error('Video loading error:', e);
-                      const videoElement = e.target as HTMLVideoElement;
-                      videoElement.style.display = 'none';
-                      const container = videoElement.parentElement;
-                      if (container) {
-                        container.innerHTML = `
-                          <div class="flex items-center justify-center h-64 bg-slate-800/50 rounded-2xl">
-                            <div class="text-center">
-                              <div class="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
-                                </svg>
+                  {lang === 'ko' ? (
+                    <iframe
+                      key={lang} // Force re-render when language changes
+                      className="w-full h-[70vh] md:h-[75vh] lg:h-[80vh] object-cover rounded-2xl"
+                      src="https://www.youtube.com/embed/fIkgx4sIArg?autoplay=1&mute=1&loop=1&playlist=fIkgx4sIArg&controls=1"
+                      title="Korean Interview"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      onError={(e) => {
+                        console.error('Video loading error:', e);
+                        const iframeElement = e.target as HTMLIFrameElement;
+                        iframeElement.style.display = 'none';
+                        const container = iframeElement.parentElement;
+                        if (container) {
+                          container.innerHTML = `
+                            <div class="flex items-center justify-center h-64 bg-slate-800/50 rounded-2xl">
+                              <div class="text-center">
+                                <div class="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                                  <svg class="w-8 h-8 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                                  </svg>
+                                </div>
+                                <p class="text-white/70 text-sm">Video temporarily unavailable</p>
+                                <p class="text-white/50 text-xs mt-2">Please try again later</p>
                               </div>
-                              <p class="text-white/70 text-sm">Video temporarily unavailable</p>
-                              <p class="text-white/50 text-xs mt-2">Please try again later</p>
                             </div>
-                          </div>
-                        `;
-                      }
-                    }}
-                  >
-                    <source src={lang === 'ko' ? "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" : "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"} type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
-                  
+                          `;
+                        }
+                      }}
+                    />
+                  ) : (
+                    <video
+                      key={lang}
+                      className="w-full h-auto max-h-[500px] object-cover"
+                      controls
+                      preload="metadata"
+                      playsInline
+                      muted
+                      onError={(e) => {
+                        console.error('Video loading error:', e);
+                        const videoElement = e.target as HTMLVideoElement;
+                        videoElement.style.display = 'none';
+                        const container = videoElement.parentElement;
+                        if (container) {
+                          container.innerHTML = `
+                            <div class=\"flex items-center justify-center h-64 bg-slate-800/50 rounded-2xl\">\n                              <div class=\"text-center\">\n                                <div class=\"w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4\">\n                                  <svg class=\"w-8 h-8 text-red-400\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\">\n                                    <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z\"></path>\n                                  </svg>\n                                </div>\n                                <p class=\"text-white/70 text-sm\">Video temporarily unavailable</p>\n                                <p class=\"text-white/50 text-xs mt-2\">Please try again later</p>\n                              </div>\n                            </div>\n                          `;
+                        }
+                      }}
+                    >
+                      <source src="/interview-full.mp4" type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  )}
                   {/* Video overlay gradient for better integration */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/10 pointer-events-none rounded-2xl" />
                 </div>
